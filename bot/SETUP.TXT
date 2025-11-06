@@ -1,0 +1,23 @@
+SETUP POUR MATTERMOST ET LINEAR
+
+1. MATTERMOST
+- Créez un compte Bot sur votre instance Mattermost.
+- Récupérez le token d'accès du bot.
+- Ajoutez le bot aux équipes et canaux souhaités (notamment le canal principal "centre ville" ou "main").
+- Notez l'URL de votre serveur Mattermost (ex: https://mattermost.monsite.com).
+
+2. LINEAR
+- Créez un token API pour votre compte Linear (https://linear.app/settings/api).
+- Configurez les webhooks dans Linear pour pointer vers l'URL publique de votre bot (ex: https://monbot.monsite.com/webhook).
+- Notez les noms et/ou IDs des teams Linear à synchroniser.
+
+3. BOT
+- Définissez la variable d'environnement LINEARBOT_CONFIG_PATH pour le chemin du fichier de configuration.
+- Préparez les variables d'environnement suivantes :
+  - LINEAR_API_TOKEN
+  - MATTERMOST_TOKEN
+  - MATTERMOST_URL
+  - LINEARBOT_CONFIG_PATH
+
+4. MAPPING
+- Utilisez la commande `/linear set-team YYY` dans Mattermost pour lier une team Mattermost à une team Linear.
